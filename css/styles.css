@@ -1,0 +1,1077 @@
+@media screen {
+    /**--- Declaracion de variables Para 
+    el tipo de fuente y colores ---**/
+:root {    
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --verde: #689c6e;
+    --blanco: #ffffff;
+    --negro: #464646;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;           /* 1 rem = 10px */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;    
+}
+
+body {
+    /*background-image: url(../img/fondo.png);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;    
+    margin: 0 auto;
+    overflow-x: hidden;
+    width: 100%;    
+}
+
+.canvas {
+    position: absolute;
+    width: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;      
+}
+
+/** Globales **/
+.contenedor {    
+    width: 120rem;    
+    margin: 0 auto;       
+}
+
+a {
+    text-decoration: none;
+}
+
+p {    
+    margin: 0;
+    line-height: 1.5;   
+}
+
+h1 {
+    font-family: var(--fuenteHeading);    
+    font-size: 1.8rem;
+}
+
+ul {
+    list-style: url(../img/item.png);
+}
+
+li {
+    line-height: 1.5;
+}
+
+span {
+    font-weight: 700;
+}
+
+.no-margin {
+    margin: 0;    
+}
+
+.leading {
+    line-height: 1.5;
+}
+
+.mg {
+    margin-bottom: 2rem;
+}
+
+/*--- Menu De Opciones ---*/
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;     
+    margin-bottom: 1.5rem; 
+    padding-top: 1.5rem;
+}
+
+.boton {           
+    font-size: 1.6rem;
+    padding: 0.8rem;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 100%;
+    border: 2px solid var(--blanco);
+    box-shadow: 0px 0px 8px #03a9f4;
+}
+
+.boton:hover {
+    filter:opacity(0.9);
+    transform:scale(1.1);
+}
+
+/** CONTENIDO PRINCIPAL **/
+/* Para dividir la hoja de vida en dos columnas*/
+.main{
+    background-color: var(--blanco);
+    display: grid;
+    grid-template-areas: "sidebar information";
+    grid-template-columns: 33% 67%;       
+    border-radius: 1.5rem;     
+} 
+
+.sidebar{
+    grid-column: sidebar;
+    background-color: var(--negro); 
+    color: var(--blanco);   
+    border-top-left-radius: 1.5rem;    
+    border-bottom-left-radius: 1.5rem;
+}
+
+.information {
+    grid-column: information;    
+}
+
+/**--- SIDEBAR ---**/
+.nombre {    
+    text-align: center;
+    margin-top: 5.5rem;
+    line-height: 0.6;
+}
+
+.nombre__header {
+    font-size: 1.6rem;
+}
+
+.contact {    
+    margin-top: 3rem;
+    margin-left: 4rem;    
+}
+
+.linkedin {    
+    margin-top: 2rem;
+    margin-left: 4rem;    
+}
+
+.languages {    
+    margin-top: 2rem;
+    margin-left: 4rem;
+    /*line-height: 0.6;*/
+}
+
+.contact__text {
+    padding-left: 3rem;
+    line-height: 1.3;
+    color: var(--blanco);
+}
+
+/*--- Programming Languages ---*/
+.p-languages {
+    margin-top: 2.5rem;
+    margin-left: 4rem;
+}
+
+.technologies {
+    margin-top: 2rem;
+    margin-left: 4rem;
+}
+
+.database {
+    margin-top: 2rem;
+    margin-left: 4rem;
+}
+
+/*--- Professional Interests ---*/
+.p-interests {
+    margin-top: 2rem;
+    margin-left: 4rem;
+}
+
+.references {
+    margin-top: 3rem;    
+    margin-left: 4rem;    
+}
+/*--- Fin Del Sidebar ---*/
+
+/** INFORMATION **/
+
+/*--- Seccion Sobre Mi ----*/
+.about-me {
+    margin-top: 5rem;
+}
+
+.about-me__title {
+    border-bottom: 2.5px solid var(--negro);
+    padding-left: 1rem;
+    margin: 0 5.5rem 1.5rem 4.5rem;
+    line-height: 1.5;
+}
+
+.about-me__parrafo {
+    padding: 0 8rem 0.8rem 1rem;
+    margin: 0 0 1.5rem 5.5rem;    
+}
+
+/*--- Seccion Educacion ---*/
+.education {
+    display: grid;
+    grid-template-areas: "izq rigth";
+    grid-template-columns: 1fr 3fr;
+    column-gap: 2rem;
+    margin-top: 3rem;
+}
+
+.title-education {
+    grid-column: 1 / 4;
+    border-bottom: 2.5px solid var(--negro);
+    padding-left: 1rem;
+    margin: 0 5.5rem 1.5rem 4.5rem;
+    line-height: 1.5;
+}
+
+.education__time {
+    grid-column: izq;            
+}
+
+.education__university {
+    grid-column: rigth;
+}
+
+.time-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 5.5rem;
+}
+
+.education__nombre {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.education__text {
+    margin-top: 3.2rem;
+}
+
+/*--- Seccion Habilidades Tecnicas ---*/
+.technical-skills {    
+    padding: 0 0 0.8rem 0.5rem;
+    margin: 3rem 5.5rem 1.5rem 4.5rem;
+}
+
+.technical-skills__title {
+    border-bottom: 2.5px solid var(--negro);
+    padding-left: 0.5rem;
+    line-height: 1.5;
+}
+
+/*--- Seccion Experiencia ---*/
+.experience {
+    display: grid;
+    grid-template-areas: "izq rigth";
+    grid-template-columns: 1fr 2fr;
+    grid-auto-flow: column;
+    column-gap: 2rem;
+    margin-left: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.title-experience {
+    grid-column: 1 / 4;
+    border-bottom: 2.5px solid var(--negro);
+    padding-left: 1rem;
+    margin: 0 5.5rem 2.5rem 2rem;
+    line-height: 1.5;
+}
+
+.experience__time {
+    grid-column: izq;
+    border-right: 2.5px solid var(--negro);
+    text-align: right;    
+}
+
+.experience__company {
+    grid-column: rigth;    
+}
+
+.experience__text {
+    display: flex;
+    flex-direction: column; 
+    padding-right: 2rem;  
+}
+
+.text__experience {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.experience__parrafo1 {
+    margin-top: 1rem;
+}
+
+.experience__parrafo2 {
+    margin-top: 11.4rem;
+}
+
+.experience__parrafo3 {
+    margin-top: 19rem;
+}
+
+.experience__parrafo4 {
+    margin-top: 8.8rem;
+}
+
+.text__experience-content {
+    margin-top: 1rem;
+    width: 90%;
+}
+}
+
+@media (max-width: 1200px) {
+    .contenedor {
+        width: 102.4rem;
+        margin: 0 auto;        
+    }
+
+    html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+    }
+
+    h1{
+        font-size: 1.6rem;
+        font-family: var(--fuenteHeading); 
+    }
+    .nombre__header {
+        font-size: 1.4rem;
+    }
+
+    li, p, a {
+        font-size: 1.5rem;
+    }
+
+    .leading {
+        line-height: 1;
+    }   
+
+    .education__text {
+        margin-top: 2.7rem;
+    }
+
+    .experience {       
+        grid-template-columns: 1.1fr 1.9fr;       
+    }    
+
+    .experience__text {
+        display: flex;
+        flex-direction: column;
+        padding-right: 1.5rem;   
+    }
+
+    .text__experience {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0;
+    }
+
+    .experience__parrafo1 {
+        margin-top: 0.6rem;
+    }
+    
+    .experience__parrafo2 {
+        margin-top: 10.8rem;        
+    }
+    
+    .experience__parrafo3 {
+        margin-top: 17.6rem;
+    }
+    
+    .experience__parrafo4 {
+        margin-top: 8.6rem;
+    }
+}
+
+@media (max-width: 1024px) {    
+
+    .contenedor {
+        width: 81.2rem;
+        margin: 0 auto;        
+    }
+
+    html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+    }
+
+    h1{
+        font-size: 1.3rem;
+        font-family: var(--fuenteHeading); 
+    }
+    .nombre__header {
+        font-size: 1.3rem;
+    }
+
+    li, p, a {
+        font-size: 1.2rem;
+    }
+
+    ul {
+        padding-left: 3rem;
+    }
+
+    .mg {
+        margin-bottom: 2rem;
+    }
+
+    .leading {
+        line-height: 1;
+    }
+
+    .main {
+        grid-template-columns: 35% 65%;
+    }
+
+    .nombre {
+        margin-bottom: 3rem;
+    }
+
+    .tab-sm {
+        margin-top: 2rem;
+        margin-left: 2.5rem;        
+    }
+
+    .tab-sm p {       
+        line-height: 1.4;
+    }    
+
+    .about-me__title {
+        border-bottom: 1.8px solid var(--negro);
+        padding-left: 0.6rem;                
+        margin: 0 3rem 0.6rem 2rem;        
+    }
+
+    .about-me__parrafo {
+        padding: 0 5rem 0 0;
+        margin: 0 0 0 3rem;
+    }
+
+    .education {
+        margin-top: 1.5rem;
+    }
+
+    .title-education {
+        border-bottom: 1.8px solid var(--negro);
+        padding-left: 0.6rem;                
+        margin: 0 3rem 0.6rem 2rem;
+    }
+
+    .time-text {
+        margin-left: 3rem;
+    }
+
+    .education__text {
+        margin-top: 2.2rem;
+    }
+
+    .technical-skills {
+        margin: 1.5rem 3rem 0 2rem;
+        padding: 0;
+    }
+
+    .technical-skills__title {
+        border-bottom: 1.8px solid var(--negro);
+        padding-left: 0.6rem;                        
+        margin: 0 0 0.6rem 0;
+    }
+
+    .experience {       
+        grid-template-columns: 1.15fr 1.85fr; 
+        column-gap: 1.5rem;
+        margin-left: 2rem;      
+    }
+
+    .title-experience {
+        border-bottom: 1.8px solid var(--negro);
+        padding-left: 0.6rem;                        
+        margin: 0 3rem 1.2rem 0;
+    }   
+
+    .experience__text {        
+        padding-right: 1.5rem;   
+    }
+
+    .text__experience {        
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .text__experience-content {
+        width: 97%;
+    }
+
+    .experience__parrafo1 {
+        margin-top: 0.6rem;
+    }
+    
+    .experience__parrafo2 {
+        margin-top: 8.8rem;
+    }
+    
+    .experience__parrafo3 {
+        margin-top: 14.2rem;
+    }
+    
+    .experience__parrafo4 {
+        margin-top: 6.8rem;
+    }
+}
+
+@media (max-width: 812px) {
+    .contenedor {
+        width: 76.8rem;
+        margin: 0 auto;
+    }
+
+    html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+    }
+
+    h1{
+        font-size: 1.1rem;
+        font-family: var(--fuenteHeading); 
+    }
+    .nombre__header {
+        font-size: 1.1rem;
+    }
+
+    li, p, a {
+        font-size: 1rem;
+    }
+
+    .mg {
+        margin-bottom: 1.2rem;
+    }
+
+    .tab-sm {
+        margin-top: 1.2rem; 
+        margin-left: 3rem;              
+    }
+
+    .tab-sm p {       
+        line-height: 1.2;
+    } 
+
+    .education__text {
+        margin-top: 1.85rem;
+    }
+    
+    .experience__parrafo1 {
+        margin-top: 0.6rem;
+    }
+    
+    .experience__parrafo2 {
+        margin-top: 6.2rem;
+    }
+    
+    .experience__parrafo3 {
+        margin-top: 10.5rem;
+    }
+    
+    .experience__parrafo4 {
+        margin-top: 4.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        width: 71.8rem;
+        margin: 0 auto;
+    }
+
+    html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+    }
+
+    h1{
+        font-size: 1.1rem;
+        font-family: var(--fuenteHeading); 
+    }
+    .nombre__header {
+        font-size: 1.1rem;
+    }
+    
+    ul {
+        list-style: url(../img/item-sm.png);
+    }
+
+    li, p, a {
+        font-size: 1rem;
+    }
+
+    .mg {
+        margin-bottom: 1.2rem;
+    }
+
+    .tab-sm {
+        margin-top: 1.2rem; 
+        margin-left: 3rem;              
+    }
+
+    .tab-sm p {       
+        line-height: 1.2;
+    } 
+
+    .education__text {
+        margin-top: 1.9rem;
+    }
+        
+    .experience__parrafo1 {
+        margin-top: 0.6rem;
+    }
+    
+    .experience__parrafo2 {
+        margin-top: 7.8rem;
+    }
+    
+    .experience__parrafo3 {
+        margin-top: 12.2rem;
+    }
+    
+    .experience__parrafo4 {
+        margin-top: 4.75rem;
+    }
+}
+
+@media (max-width: 718px) {   
+
+    .menu{
+        margin-bottom: 1rem;
+        padding-top: 1rem;
+        gap: 1rem;
+    }
+
+    .boton {
+        padding: 0.4rem;        
+    }
+
+    .contenedor {
+        width: 37.5rem;
+        margin: 0 auto;
+    }
+
+    html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+    }
+
+    h1{
+        font-size: 0.6rem;
+        font-family: var(--fuenteHeading); 
+    }
+
+    .nombre {
+        margin: 2rem 0;
+    }
+
+    .nombre__header {
+        font-size: 0.6rem;
+    }
+
+    .contact__text {
+        padding-left: 1.2rem;
+        margin: 0;        
+    }
+    
+    ul {
+        list-style: url(../img/item-sm2.svg);
+    }
+
+    li, p, a {
+        font-size: 0.4rem;
+    }
+
+    .mg {
+        margin: 1rem 0;
+    }
+
+    .tab-sm {
+        margin-top: 0.8rem; 
+        margin-left: 2rem;              
+    }
+
+    .tab-sm p {       
+        line-height: 1.2;
+    } 
+
+    .linkedin {
+        line-height: 0.1;
+    }
+
+    .tab-sm ul {
+        margin: 0.6rem 0;
+        padding-left: 1.5rem;
+    }
+    
+    .references ul{
+        margin-top: 0;
+    }
+
+    .education {
+        margin-top: 1rem;
+        column-gap: 1rem;
+    }
+
+    .education__nombre {
+        gap: 1rem;
+    }
+
+    .time-text {
+        gap: 1rem;
+    }
+
+    .education__text {
+        margin-top: 1.1rem;
+    }
+
+    .about-me {
+        margin-top: 1.8rem;        
+    }    
+
+    .about-me__parrafo {
+        margin-left: ;
+    }
+
+    .technical-skills{
+        margin-top: 1rem;
+    }
+
+    .technical-skills ul {
+        margin-bottom: 1rem;
+    }
+
+    .experience {
+        column-gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .text__experience {
+        gap: 1rem;
+    }
+
+    .experience__text {
+        padding-right: 1rem;
+    }
+
+    .experience__time {
+        border-right: 1px solid var(--negro);
+    }
+
+    .text__experience-content {
+        margin: 0;
+    }
+
+    .experience__parrafo1 {
+        margin-top: 0;
+    }
+    
+    .experience__parrafo2 {
+        margin-top: 2.8rem;
+    }
+    
+    .experience__parrafo3 {
+        margin-top: 4rem;
+    }
+    
+    .experience__parrafo4 {
+        margin-top: 2.25rem;
+    }
+}
+
+@media print {
+    :root {    
+        --fuenteHeading: 'PT Sans', sans-serif;
+        --fuenteParrafos: 'Open Sans', sans-serif;
+    
+        --verde: #689c6e;
+        --blanco: #ffffff;
+        --negro: #464646;
+    }
+    
+    html {        
+        font-size: 65.7%;           
+    }  
+    
+    .canvas {
+        display: none;          
+    }
+
+    .menu {
+        display: none             
+    }
+
+    /** Globales **/    
+    .contenedor {    
+        width: 120rem;    
+        margin: 0 auto;       
+    }
+    
+    a {       
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 1.5rem;
+        margin: 0;
+        line-height: 1.5;        
+    }
+    
+    h1 {
+        font-family: var(--fuenteHeading);    
+        font-size: 1.6rem;
+    }   
+    
+    ul {
+        list-style: url(../img/item.png);
+    }
+    
+    li {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+    
+    span {
+        font-weight: 700;
+    }   
+    
+    .no-margin {
+        margin: 0;    
+    }
+    
+    .leading {
+        line-height: 1.2;
+    }    
+    
+    /** CONTENIDO PRINCIPAL **/
+    /* Para dividir la hoja de vida en dos columnas */
+    .main{
+        background-color: var(--blanco);
+        display: grid;
+        grid-template-areas: "sidebar information";
+        grid-template-columns: 30% 70%;       
+    } 
+    
+    .sidebar{
+        grid-column: sidebar;
+        background-color: var(--negro);
+        color: var(--blanco);
+        border-bottom-left-radius: 1.5rem;   
+        border-top-left-radius: 1.5rem;        
+    }
+    
+    .information {
+        grid-column: information;
+        border-left: 2.5px solid var(--negro);
+    }
+    
+    /**--- SIDEBAR --- **/
+    .nombre {    
+        text-align: center;
+        margin-top: 1.5rem;
+        line-height: 0.6;
+    }
+    
+    .nombre__header {
+        font-size: 1.6rem;
+    }
+    
+    .contact {
+        margin-top: 1.5rem;
+        margin-left: 4rem;    
+    }
+    
+    .linkedin {
+        margin-top: 1.5rem;
+        margin-left: 4rem;    
+    }
+    
+    .languages {
+        margin-top: 1.5rem;
+        margin-left: 4rem;        
+    }
+    
+    .contact__text {
+        padding-left: 1rem;
+        line-height: 1.3;
+        color: var(--negro);
+    }
+    
+    /*--- Programming Languages ---*/
+    .p-languages {
+        margin-top: 1.5rem;
+        margin-left: 4rem;
+    }
+    
+    .technologies {
+        margin-top: 1.5rem;
+        margin-left: 4rem;
+    }
+    
+    .database {
+        margin-top: 1.5rem;
+        margin-left: 4rem;
+    }
+    
+    /*--- Professional Interests ---*/
+    .p-interests {
+        margin-top: 2rem;
+        margin-left: 4rem;
+    }
+    
+    .references {
+        margin-top: 2rem;    
+        margin-left: 4rem;    
+    }
+    /*--- Fin Del Sidebar ---*/
+    
+    /** INFORMATION **/
+    
+    /*--- Seccion Sobre Mi ---*/
+    .about-me {
+        margin-top: 0.6rem;
+    }
+    
+    .about-me__title {
+        border-bottom: 2.5px solid var(--negro);
+        padding-left: 1rem;
+        margin: 0 8rem 1.5rem 4.5rem;
+        line-height: 1.5;
+    }
+    
+    .about-me__parrafo {
+        padding: 0 8rem 0.8rem 1rem;
+        margin: 0 0 1rem 5.5rem;
+        width: 80%;
+    }
+    
+    /*--- Seccion Educacion ---*/
+    .education {
+        display: grid;
+        grid-template-areas: "izq rigth";
+        grid-template-columns: 18% 82%;
+        column-gap: 2rem;
+        margin-top: 1rem;
+    }
+    
+    .title-education {
+        grid-column: 1 / 4;
+        border-bottom: 2.5px solid var(--negro);
+        padding-left: 1rem;
+        margin: 0 8rem 1.5rem 4.5rem;
+        line-height: 1.5;
+    }
+    
+    .education__time {
+        grid-column: izq;            
+    }
+    
+    .education__university {
+        grid-column: rigth;
+    }
+    
+    .time-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-left: 5.5rem;
+    }
+    
+    .education__nombre {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .education__text {
+        margin-top: 2rem;
+    }
+    
+    /*--- Seccion Habilidades Tecnicas ---*/
+    .technical-skills {    
+        padding: 0 0 0.8rem 0.5rem;
+        margin: 1.2rem 8rem 1.2rem 4.5rem;   
+        width: 76%;     
+    }
+    
+    .technical-skills__title {
+        margin-bottom: 2rem;
+        border-bottom: 2.5px solid var(--negro);
+        padding-left: 0.5rem;
+        line-height: 1.5;
+    }
+    
+    /*--- Seccion Experiencia ---*/
+    .experience {
+        display: grid;
+        grid-template-areas: "izq rigth";
+        grid-template-columns: 1.2fr 2.8fr;
+        grid-auto-flow: column;
+        column-gap: 2rem;
+        margin-bottom: 1 rem;
+    }
+    
+    .title-experience {
+        grid-column: 1 / 4;
+        border-bottom: 2.5px solid var(--negro);
+        padding-left: 1rem;
+        margin: 0 8rem 2.5rem 4.5rem;
+        line-height: 1.5;
+    }
+    
+    .experience__time {
+        grid-column: izq;
+        border-right: 2.5px solid var(--negro);
+        text-align: right;    
+    }
+    
+    .experience__company {
+        grid-column: rigth;    
+    }
+    
+    .experience__text {
+        display: flex;
+        flex-direction: column;
+        padding-right: 2rem;
+    }
+    
+    .text__experience {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }    
+
+    .experience__parrafo1 {
+        margin-top: 1rem;
+    }
+    
+    .experience__parrafo2 {
+        margin-top: 8.8rem;
+    }
+    
+    .experience__parrafo3 {
+        margin-top: 13.3rem;
+    }
+    
+    .experience__parrafo4 {
+        margin-top: 4.5rem;
+    }
+    
+    .text__experience-content {
+        margin-top: 1rem;
+        width: 77.2%;
+    }  
+}
